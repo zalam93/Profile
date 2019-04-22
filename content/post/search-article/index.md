@@ -46,6 +46,9 @@ TF-IDF and used cosine similarity to find the similarity between the query and t
 {{< figure library="1" src="search-page.png" Title="Dataset"  >}}
 </div>
 
+<h5> Github Link </h5>
+<p> https://github.com/zalam93/search-dm </p>
+
 <h5 align="center"> Dataset </h5>
 <p>The dataset has 17 fields and represents reviews from the current and previous employees of that company. the fields that were useful for my search engine is Pros and Company. Pros contains the positive
 reviews of the employeers about the current/previous companies. I decided not to include summary field as the text in that field was not clear and I found using "Pros" was giving me better accuracy and it has 
