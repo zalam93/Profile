@@ -43,8 +43,14 @@ filter_default = 0
 +++
 A successfull career not only is dependable to the pay a employeer gets but there are other external and internal factors such as work environment, stress load, internal politics of the company and pros and the cons which decide if the person's work style is compatible with the company or not. getting a high pay job in the company where your work style does not match and leads to constant stress and dicomfort will probably decrease the level of productivity and satisfication for the work hence resulting in less probability of having a successful professional career at that company.
 To solve this the mobile application would be available soon from which a user can search for the companies they would like to work at which is also compatible to their needs, also the application is a recommendation system which will help you find the suitable company for you.
-Propsal Link : https://zalam.netlify.com/files/proposal.pdf
-Phase I : Search Link : https://zalam.netlify.com/files/search.pdf
+## Proposal Link
+https://zalam.netlify.com/files/proposal.pdf
+
+## Search Report:
+https://zalam.netlify.com/post/search-article/
+
+## Github Link:
+https://github.com/zalam93/search-dm
 
 
 {{< figure library="1" src="prototype.jpg" Title="Prototype"  >}}
