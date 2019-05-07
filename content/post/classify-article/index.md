@@ -37,55 +37,92 @@ authors = ["Zeeshan Alam"]
 
 <p> The link for the complete classifer implementation using Multinomial Naive Bayes algorithm for the classification can be found below </p>
 <h5 align="center"> Link : https://dmsearch.herokuapp.com/classify </p>
-{{< figure library="1" src="search-page.png" Title="Dataset"  >}}
+{{< figure library="1" src="code.png" Title="Dataset"  >}}
+
+
 </div>
 
 <h5 align="center"> Dataset </h5>
-<p>The dataset has 17 fields and represents reviews from the current and previous employees of that company. the fields that were useful for my search engine is Pros and Company. Pros contains the positive
-reviews of the employeers about the current/previous companies. I decided not to include summary field as the text in that field was not clear and I found using "Pros" was giving me better accuracy and it has 
-proper review comment. There was another field of interest which is "Cons" which has negative comments by the users for the companies though as I am focusing about finding the right company for the user in terms of the positive attributes
-there fore I decided to neglect the "Cons" field and worked only on "Pros" field with the correlation with the "Company" field in this search project.</p>
+
+<p>The dataset has 17 fields and represents reviews from the current and previous employees of that company. the fields that were useful for my classification is:
+  * Benefits Rating
+  * Growth Rating
+  * Workload Rating
+  * Senior Management Support Rating
+  * Company Ranking
+  
+  My classification works on the numerial fields which are mentioned above
+
 {{< figure library="1" src="dataset.png" Title="Dataset"  >}}
 
 
-<h5> What does TF-IDF means? </h5>
+<h5> What is Classification? </h5>
 
 <p>
-Tf-idf stands for term frequency-inverse document frequency, and the tf-idf weight is a weight often used in information retrieval and text mining.
- The importance increases proportionally to the number of times a word appears in the document but is offset by the frequency of the word in the corpus. 
+Classification separates observations into groups based on their characteristics. For exampls, students applying to engineering schools could be separated into potential acceptance, maybe accepted, and unlikely expected based on grades, GRE scores, industrial experience, and outstanding activities.
 </p>
 
-<h5> Understanding the Basic Algorithm </h5>
-<p> 
-The TF*IDF algorithm is used to weigh a keyword in any content and assign the level of importance to that keyword based on the number of times it appears in the document. More importantly, it checks how relevant the keyword is throughout all the document, which is referred to as corpus.
-TF*IDF is a weighting factor for features, the more weight of the feature the more that type of term occurs in the specified document which is offset by the number of times the word appears
-in the entire document which eventually helps removing common words (stop-words in programming terms) in the language.
-For a term t in a document d, the weight Wt,d of term t in document d is given by:
+**Algorithm Used**
+***Multinomial Naive Bayes Classification:***
+Naive Bayes is a machine learning algorithm for classification problems. It is basically based on Bayes probability theorem. this algorithm is one of the simplier algorithm and fast to build models and it makes predictions with Naive Bayes algorithm.
+
+
+****Bayes’ Theorem is stated as:****
+
+***P(h|d) = (P(d|h) * P(h)) / P(d)***
+
+***f1,f2,f3,....fn = fields in the dataset***
+****This application classifies company based on the values from the following field****
+- Work-life balance
+- Ranking
+- Cultural ratings
+- Growth Opportunities ratings
+- Benefits rating
+- Senior Management
+{{< figure library="1" src="classify.png" Title="Dataset"  >}}
+
+***Code (Classifier):***
+The function below counts the number of times a company occur in the dataset where name is the variable which is the name of the company for example : Google, Facebook, Netflix, Amazon
+
+     def count(name):
+        n_count = data['Company'][data['Company'] == name].count()
+        return n_count
+
+The function below takes the company name count by calling the count function then divide the count by the total number of rows in the dataset to get the Probability count of the company name
+    def P_count(name):
+        P_company = count(name) / n_rows
+        return P_company
+
+Following are the two main steps in the Naive Bayes Algorithm
+****Calculating mean*****
+
+    mean = data_means[col][data_var.index == name].values[0]
+****Calculating variance****
+ 
+     variance = data_var[col][data_var.index == name].values[0]
+****Calculating Likelihood****
+ P(X|Y): Probability of X given Y:
+ 
+       p = 1 / (np.sqrt(2 * np.pi * vy)) * np.exp((-(x - my)**2) / (2 * vy))
+       
+****Formula for the Algorithm****:
+
+where name is the variable which represents the name of the company
+
+        result = P_count(name) * \
+            Px_given_Py(c0, calc_mean('Workload', name), calc_var('Rating', name)) * \
+            Px_given_Py(c1, calc_mean('Workload', name), calc_var('Workload', name)) * \
+            Px_given_Py(c2, calc_mean('Culture', name), calc_var('Culture', name)) * \
+            Px_given_Py(c3, calc_mean('Growth', name), calc_var('Growth', name)) * \
+            Px_given_Py(c4, calc_mean('Benefits', name), calc_var('Benefits', name)) * \
+            Px_given_Py(c5, calc_mean('Management', name), calc_var('Management', name))
+            
+
+
+
+
 <p>
-
-
-<p align="center"><b> Wt,d = TFt,d log (N/DFt) </b></p>
-
-<p>
-Where:
-</p>
-
-- TFt,d is the number of occurrences of t in document d. </br>
-- DFt is the number of documents containing the term t. </br>
-- N is the total number of documents in the corpus. </br>
-</p>
-
-the log above is basically used to dumpen the effects of IDF Function
-<p align="center">Smoothing for IDF : log( 1 + N/ |{dED : tED}| ) </p>
-The smoothing factor is used for introducing the lower bound of log(2) so that nothing will ever be multiplied by 0 by the IDF.
-
-{{< figure library="1" src="code.png" Title="Dataset"  >}}
-
-Cosine similarity is the cosine of the angle between two n-dimensional vectors in an n-dimensional space. It is the dot product of the two vectors divided by the product of the two vectors' lengths (or magnitudes).
-here cosine similiary is used to find the similarity between the query and the documents.
-
-<p>
-The link for the web is available on the top of the blog page. I have developed the web app using python django framework and the script which is being called when a user types and clicks the button is 
+The link for the web is available on the top of the blog page. I have developed the web app using python django framework and the script which is being called when a user selects the options and clicks the button is 
 acting as the intermediate web service. The web application is hosted on free hosting site Heroku</p>
 
 </p>
@@ -103,9 +140,8 @@ I tried to optimize the search query response time that was challenging part for
 
 <div style="background-color:#f0f0f0">
 <h5 align="center"> References </h5>
-<p> https://medium.freecodecamp.org/how-to-process-textual-data-using-tf-idf-in-python-cd2bbc0a94a3 </p>
-<p> https://towardsdatascience.com/tfidf-for-piece-of-text-in-python-43feccaa74f8 </p>
-<p> https://github.com/Heetmadhu/Movie-Recommendation/blob/master/MovieSearch.ipynb </p>
-<p> https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html </p>
-<p> https://github.com/mohdkashif93/tf-idf-implementation </p>
+<p> https://www.kaggle.com/rakeshrau/social-network-ads </p>
+<p> https://chrisalbon.com/machine_learning/naive_bayes/naive_bayes_classifier_from_scratch/</p>
+<p> https://medium.com/machine-learning-algorithms-from-scratch/naive-bayes-classification-from-scratch-in-python-e3a48bf5f91a </p>
+<p> hhttps://towardsdatascience.com/na%C3%AFve-bayes-from-scratch-using-python-only-no-fancy-frameworks-a1904b37222d </p>
 </div>
