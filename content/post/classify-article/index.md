@@ -20,8 +20,7 @@ authors = ["Zeeshan Alam"]
 #   Otherwise, set `projects = ["Search Engine"]`.
 
 
-Github Link
-https://github.com/zalam93/search-dm
+
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
@@ -38,7 +37,8 @@ https://github.com/zalam93/search-dm
 
 <p> The link for the complete classifer implementation using Multinomial Naive Bayes algorithm for the classification can be found below </p>
 <h5 align="center"> Link : https://dmsearch.herokuapp.com/classify </p>
-
+Github Link
+https://github.com/zalam93/search-dm
 
 </div>
 
