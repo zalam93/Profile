@@ -1,7 +1,7 @@
 +++
-title = "Search Engine - Development Phase I"
-subtitle ="TF-IDF Implementation"
-date = 2019-04-21T10:24:08-05:00
+title = "Classification - Development Phase II"
+subtitle ="Multinomial Naive Bayes"
+date = 2019-05-07T10:24:08-05:00
 draft = false
 
 # Authors. Comma separated list, e.g. `["Zeeshan Alam"]`.
@@ -9,8 +9,8 @@ authors = ["Zeeshan Alam"]
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["Search Engine", "TF-IDF", "JBolt"]
-categories = ["Educational","Data Mining"]
+tags = ["Classifier", "Naive-Bayes, "JBolt"]
+categories = ["Educational","Machine Learning"]
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -19,17 +19,11 @@ categories = ["Educational","Data Mining"]
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = ["Search Engine"]`.
 
-
-
-projects = ["Search Engine"]
-
-
-
+projects = ["Classification"]
 
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
-[image]
-  # Caption (Search)
+
+  # Caption
   caption = "JBolt, Application which tells you about your future company!"
 
   # Focal point (optional)
