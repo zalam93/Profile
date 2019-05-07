@@ -1,6 +1,6 @@
 +++
-title = "Search Engine - Development Phase I"
-subtitle ="TF-IDF Implementation"
+title = "Classification : Machine Learning"
+subtitle ="Naive Bayes Implementation"
 date = 2019-04-21T10:24:08-05:00
 draft = false
 
@@ -9,8 +9,8 @@ authors = ["Zeeshan Alam"]
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["Search Engine", "TF-IDF", "JBolt"]
-categories = ["Educational","Data Mining"]
+# tags = ["Search Engine", "TF-IDF", "JBolt"]
+# categories = ["Educational","Data Mining"]
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -18,10 +18,6 @@ categories = ["Educational","Data Mining"]
 #   E.g. `projects = ["deep-learning"]` references 
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = ["Search Engine"]`.
-
-
-
-projects = ["Search Engine"]
 
 
 
