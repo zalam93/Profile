@@ -79,6 +79,7 @@ For a term t in a document d, the weight Wt,d of term t in document d is given b
 Where:
 </p>
 
+
 - TFt,d is the number of occurrences of t in document d. </br>
 - DFt is the number of documents containing the term t. </br>
 - N is the total number of documents in the corpus. </br>
