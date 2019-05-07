@@ -38,7 +38,7 @@ projects = ["Search Engine"]
 +++
 
 <div style="background-color:#f0f0f0">
-<p> The content covers the development phase I for the data mining class at University of Texast at Arlington under Prof Deokgun Park. the first phase of the development covers the search engine where I have implemented
+<p>  the first phase of the development covers the search engine where I have implemented
 TF-IDF and used cosine similarity to find the similarity between the query and the reviews. </p>
 
 <p> The link for the complete implementation for the search engine can be found below </p>
