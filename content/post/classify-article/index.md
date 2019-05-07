@@ -37,7 +37,6 @@ authors = ["Zeeshan Alam"]
 
 <p> The link for the complete classifer implementation using Multinomial Naive Bayes algorithm for the classification can be found below </p>
 <h5 align="center"> Link : https://dmsearch.herokuapp.com/classify </p>
-{{< figure library="1" src="code.png" Title="Dataset"  >}}
 
 
 </div>
@@ -63,7 +62,7 @@ Classification separates observations into groups based on their characteristics
 </p>
 
 **Algorithm Used**
-***Multinomial Naive Bayes Classification:***
+**Multinomial Naive Bayes Classification:*
 Naive Bayes is a machine learning algorithm for classification problems. It is basically based on Bayes probability theorem. this algorithm is one of the simplier algorithm and fast to build models and it makes predictions with Naive Bayes algorithm.
 
 
@@ -93,11 +92,13 @@ The function below takes the company name count by calling the count function th
         P_company = count(name) / n_rows
         return P_company
 
-Following are the two main steps in the Naive Bayes Algorithm
-****Calculating mean*****
+Following are the two main steps in the Naive Bayes Algorithm:
+
+**Calculating mean**:
 
     mean = data_means[col][data_var.index == name].values[0]
-****Calculating variance****
+
+****Calculating variance****:
  
      variance = data_var[col][data_var.index == name].values[0]
 ****Calculating Likelihood****
@@ -127,16 +128,18 @@ acting as the intermediate web service. The web application is hosted on free ho
 
 </p>
 
-<h5 align="center"> Challenges </h5>
-There were many challegens to complete the search feature. the first and foremost was to learn the TF-IDF algorithm implementation as whole and to implement it properly to get the better accuracy in the result.
-Initially my idea was to go for mobile application but Windows 10 Home does not support Hyper-V so I was not able to run emulator to test and build my code and on top of that not having android phone wasn't a big help either so I had to
-change my plans from mobile app (android) to web application. I built this using Django framework where I just read the documentation and learning was not a big issue.
+<h5 align="center"> Contribution </h5>
+**Implementation of the Algorithm from scratch**:
+- Reading the file (dataset)
+- Only extracting the columns required for the classification out of 17 fields (['Company', 'Rating', 'Workload', 'Culture', 'Growth', 'Benefits', 'Management'])
+- Training the data and then testing the data for the classification
+- Calculation of mean and variance
+- Calculating the Likelihood probability
+- Function that labels the data for classification based on naive bayes algorithm
 
-The deployment was a big mess as Heroku's documentation is not that accurate. There were many issues while deploying the web application. If i solve the first issue it leads to another issue and so on. Finally
-after checking errors through log files and fixing all of them I successfully deployed my web application.
 
-Most of the code was simple as I just used tutorial and built in library but the challegen there was to understand how it works (cosine-similiary, TF-IDF) and how it is interlinked in the code from the library i used.
-I tried to optimize the search query response time that was challenging part for me for that I had to read the book provided by Prof in the class syllabus.
+**Accuracy**
+- For accuracy the more training data given to the training set the more accurate it would be for the classification
 
 <div style="background-color:#f0f0f0">
 <h5 align="center"> References </h5>
