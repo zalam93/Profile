@@ -111,6 +111,13 @@ after checking errors through log files and fixing all of them I successfully de
 Most of the code was simple as I just used tutorial and built in library but the challegen there was to understand how it works (cosine-similiary, TF-IDF) and how it is interlinked in the code from the library i used.
 I tried to optimize the search query response time that was challenging part for me for that I had to read the book provided by Prof in the class syllabus.
 
+**Making the search engine accurate**
+Technique used were 
+- lemmatization
+- stopwords
+
+after removing stop words (common words) and using lemmatization technique the accuracy increased for the search engine results
+
 <div style="background-color:#f0f0f0">
 <h5 align="center"> References </h5>
 <p> https://medium.freecodecamp.org/how-to-process-textual-data-using-tf-idf-in-python-cd2bbc0a94a3 </p>
