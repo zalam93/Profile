@@ -38,4 +38,3 @@ authors = ["Zeeshan Alam"]
 {{< figure library="1" src="b1.png" Title="Final Report"  >}}
 {{< figure library="1" src="b2.png" Title="Final Report" >}}
 
-Thank you!!
