@@ -55,7 +55,7 @@ A recommender system or a recommendation system is a subclass of information fil
 
 Cosine similarity is the cosine of the angle between two n-dimensional vectors in an n-dimensional space. It is the dot product of the two vectors divided by the product of the two vectors' lengths (or magnitudes).
 
-
+{{< figure library="1" src="recommend.png" Title="Recommendation System"  >}}
 
 <div style="background-color:#f0f0f0">
 <h5 align="center"> References </h5>
