@@ -35,7 +35,7 @@ authors = ["Zeeshan Alam"]
   focal_point = "Left"
 +++
 
-{{< figure library="1" src="b1.png" Title="Final ReportI"  >}}
-{{< figure library="1" src="b2.png" Title="Final ReportII  >}}
+{{< figure library="1" src="b1.png" Title="Final Report"  >}}
+{{< figure library="1" src="b2.png" Title="Final Report" >}}
 
 Thank you!!
