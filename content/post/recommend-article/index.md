@@ -52,29 +52,9 @@ users for the same company, but for this one i needed a different dataset with u
 A recommender system or a recommendation system is a subclass of information filtering system that seeks to predict the "rating" or "preference" a user would give to an item. There are two types of recommendation systems 1) Content Based Filtering 
 2) Collaborative filtering. In this project I have used Content Based Filtering
 
-<h5> Understanding the Basic Algorithm </h5>
-<p> 
-Content-based Filtering recommends items based on a comparison between the content of the items and a user profile. 
-The content of each item is represented as a set of descriptors or terms, typically the words that occur in a document.
-
-</p>
-
-
-<p align="center"><b> Wt,d = TFt,d log (N/DFt) </b></p>
-
-<p>
-Where:
-</p>
-
 
 Cosine similarity is the cosine of the angle between two n-dimensional vectors in an n-dimensional space. It is the dot product of the two vectors divided by the product of the two vectors' lengths (or magnitudes).
-here cosine similiary is used to find the similarity between the query and the documents.
 
-<p>
-The link for the web is available on the top of the blog page. I have developed the web app using python django framework and the script which is being called when a user types and clicks the button is 
-acting as the intermediate web service. The web application is hosted on free hosting site Heroku</p>
-
-</p>
 
 
 <div style="background-color:#f0f0f0">
